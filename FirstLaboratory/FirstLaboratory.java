@@ -21,10 +21,9 @@ public class MyFirstLaboratory {
         System.out.println("This is my first laboratory exercise.");
     }
 }
-
 */
 
-/*TEST STEM 3
+/* TEST STEM 3
 public class MyFirstLaboratory {
     public static void main2(String[] args) {
         System.out.println("This is my first laboratory exercise.");
