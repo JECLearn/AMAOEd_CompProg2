@@ -14,3 +14,20 @@ public class FirstLaboratory {
         System.out.println("This is my first laboratory exercise.");
     }
 }
+
+/* TEST STEM 2
+public class MyFirstLaboratory {
+    public static void main(String[] args) {
+        System.out.println("This is my first laboratory exercise.");
+    }
+}
+
+*/
+
+/*TEST STEM 3
+public class MyFirstLaboratory {
+    public static void main2(String[] args) {
+        System.out.println("This is my first laboratory exercise.");
+    }
+}
+*/
