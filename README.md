@@ -1,6 +1,6 @@
 # AMAOEd_CompProg2
 
-MIS6232 - Computer Programming 2 (Java)
+AMAOEd MIS6232 - Computer Programming 2 (Java)
 
 Author: J. E. Cunanan
 
