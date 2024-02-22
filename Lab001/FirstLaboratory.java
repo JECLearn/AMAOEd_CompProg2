@@ -7,7 +7,7 @@ Student No: 2022-0072254
 Laboratory Exercise 001
 */
 
-package FirstLaboratory;
+package Lab001.FirstLaboratory;
 
 public class FirstLaboratory {
     public static void main(String[] args) {
