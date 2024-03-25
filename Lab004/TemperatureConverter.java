@@ -8,6 +8,7 @@ Laboratory Exercise 004 Temperature Converter
 */
 package Lab004;
 import java.util.Scanner;
+
 public class TemperatureConverter {
     public static void main(String[] args) {
         // variable init
