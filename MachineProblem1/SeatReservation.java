@@ -52,6 +52,7 @@ public class SeatReservation {
             System.out.print("Seat number: ");
             int userSeat = scanner.nextInt();
 
+            // check for invalid user input
             if (userSeat < 1 || userSeat > rows * columns) {
                 System.out.println("\nInvalid seat number. Please try again.");
                 continue;
@@ -72,6 +73,7 @@ public class SeatReservation {
                     break;
                 }
             }
+            // check for previously reserved seat
             if (!seatReserved) {
                 System.out.println("\nSeat is taken. Please try again.");
             }
