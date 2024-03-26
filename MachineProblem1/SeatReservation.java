@@ -18,7 +18,7 @@ public class SeatReservation {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 if (seats[i][j] == 0) {
-                    System.out.printf("%5s", "0");
+                    System.out.printf("%5s", "X");
                 } else {
                     System.out.printf("%5d", seats[i][j]);
                 }
@@ -54,8 +54,23 @@ public class SeatReservation {
             }
 
             boolean seatReserved = false;
-            for (int i = 0; i < rows; i++) {
+            char c = '0';
 
+            for (int i = 0; i < rows; i++) {
+                for (int j = 0; j < columns; j++) {
+                    if (seats[i][j] == userSeat) {
+                        seats[i][j] = 0;
+                        seatReserved = true;
+                        System.out.println("\nSeat successfully reserved. ");
+                        break;
+                    }
+                }
+                if (seatReserved) {
+                    break;
+                }
+            }
+            if (!seatReserved) {
+                System.out.println("\nSeat is taken. Please try again.");
             }
         }
     }
