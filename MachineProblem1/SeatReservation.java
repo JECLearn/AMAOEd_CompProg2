@@ -38,7 +38,7 @@ public class SeatReservation {
             }
         }
 
-        // handling user input
+        // handling user input, reserving seat
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
