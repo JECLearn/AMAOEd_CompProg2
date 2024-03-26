@@ -11,5 +11,9 @@ package MachineProblem1;
 public class SeatReservation {
     public static void main(String[] args) {
 
+        // seat grid function
+        int rows = 5;
+        int columns = 7;
+
     }
 }
