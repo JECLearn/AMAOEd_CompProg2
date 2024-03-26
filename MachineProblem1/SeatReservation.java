@@ -16,6 +16,7 @@ public class SeatReservation {
     // seat grid function
     static final int rows = 5;
     static final int columns = 7;
+
     public static void seatGrid(int[][] seats) {
         System.out.println();
         for (int i = 0; i < rows; i++) {
