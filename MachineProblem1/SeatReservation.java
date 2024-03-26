@@ -64,7 +64,7 @@ public class SeatReservation {
                     if (seats[i][j] == userSeat) {
                         seats[i][j] = 0;
                         seatReserved = true;
-                        System.out.println("\nSeat successfully reserved. ");
+                        System.out.println("\nSeat successfully reserved.");
                         break;
                     }
                 }
