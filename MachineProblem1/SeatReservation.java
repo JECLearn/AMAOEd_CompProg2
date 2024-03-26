@@ -12,6 +12,7 @@ package MachineProblem1;
 import java.util.Scanner;
 
 public class SeatReservation {
+
     // seat grid function
     static final int rows = 5;
     static final int columns = 7;
@@ -28,6 +29,7 @@ public class SeatReservation {
             System.out.println();
         }
     }
+
     public static void main(String[] args) {
 
         // grid numbering
@@ -56,7 +58,6 @@ public class SeatReservation {
             }
 
             boolean seatReserved = false;
-            char c = '0';
 
             for (int i = 0; i < rows; i++) {
                 for (int j = 0; j < columns; j++) {
