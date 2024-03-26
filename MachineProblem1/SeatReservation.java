@@ -27,7 +27,36 @@ public class SeatReservation {
         }
     }
     public static void main(String[] args) {
+
+        // grid numbering
         int[][] seats = new int[rows][columns];
-        seatGrid(seats);
+        int seatNumber = 1;
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                seats[i][j] = seatNumber++;
+            }
+        }
+
+        // handling user input
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            seatGrid(seats);
+
+            System.out.println("\nPlease enter seat number to reserve.");
+            System.out.print("Seat number: ");
+            int userSeat = scanner.nextInt();
+
+            if (userSeat < 1 || userSeat > rows * columns) {
+                System.out.println("\nInvalid seat number. Please try again.");
+                continue;
+            }
+
+            boolean seatReserved = false;
+            for (int i = 0; i < rows; i++) {
+
+            }
+        }
     }
 }
