@@ -13,13 +13,13 @@ import java.util.Scanner;
 public class SeatReservation {
 
     // seat grid function
-    static final int rows = 5;
-    static final int columns = 7;
+    static final int ROWS = 5;
+    static final int COLUMNS = 7;
 
     public static void seatGrid(int[][] seats) {
         System.out.println();
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {
+        for (int i = 0; i < ROWS; i++) {
+            for (int j = 0; j < COLUMNS; j++) {
                 if (seats[i][j] == 0) {
                     System.out.printf("%5s", "X");
                 } else {
@@ -33,11 +33,11 @@ public class SeatReservation {
     public static void main(String[] args) {
 
         // grid numbering
-        int[][] seats = new int[rows][columns];
+        int[][] seats = new int[ROWS][COLUMNS];
         int seatNumber = 1;
 
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {
+        for (int i = 0; i < ROWS; i++) {
+            for (int j = 0; j < COLUMNS; j++) {
                 seats[i][j] = seatNumber++;
             }
         }
@@ -53,15 +53,15 @@ public class SeatReservation {
             int userSeat = scanner.nextInt();
 
             // check for invalid user input
-            if (userSeat < 1 || userSeat > rows * columns) {
+            if (userSeat < 1 || userSeat > ROWS * COLUMNS) {
                 System.out.println("\nInvalid seat number. Please try again.");
                 continue;
             }
 
             boolean seatReserved = false;
 
-            for (int i = 0; i < rows; i++) {
-                for (int j = 0; j < columns; j++) {
+            for (int i = 0; i < ROWS; i++) {
+                for (int j = 0; j < COLUMNS; j++) {
                     if (seats[i][j] == userSeat) {
                         seats[i][j] = 0;
                         seatReserved = true;
