@@ -16,7 +16,7 @@ public class AddressBook {
     private String emailAddress;
 
     // Constructor
-    public AddressBook(String name, String address, String mobileNumber, String emailAddress) {
+    public AddressBook() {
         this.name = name;
         this.address = address;
         this.mobileNumber = mobileNumber;
