@@ -1,3 +1,11 @@
+/*
+AMAOEd MIS6232 Computer Programming 2 (Java)
+
+Author: J. E. Cunanan
+Student No: 2022-0072254
+
+Machine Problem 2
+*/
 package MachineProblem2;
 
 public class Employee_Cunanan {
