@@ -49,20 +49,20 @@ public class Employee_Cunanan {
 
         // Print to terminal
         System.out.println("\n------------------------------------------------------------");
-        System.out.println("Date Generated:  " + formattedDateTime);
+        System.out.println("Date Generated  : " + formattedDateTime);
         System.out.println("------------------------------------------------------------");
-        System.out.println("Employee Name:   " + payslip.getEmployeeName());
-        System.out.println("Basic Salary:    " + formattedBasicSalary);
-        System.out.println("No. of OT Hours: " + formattedOverTimeHours + " Hours");
-        System.out.println("OT Pay:          " + formattedOverTimePay);
-        System.out.println("Gross Income:    " + formattedGrossIncome);
-        System.out.println("Withholding Tax: " + formattedWithholdingTax);
+        System.out.println("Employee Name   : " + payslip.getEmployeeName());
+        System.out.println("Basic Salary    : " + formattedBasicSalary);
+        System.out.println("No. of OT Hours : " + formattedOverTimeHours + " Hours");
+        System.out.println("OT Pay          : " + formattedOverTimePay);
+        System.out.println("Gross Income    : " + formattedGrossIncome);
+        System.out.println("Withholding Tax : " + formattedWithholdingTax);
         System.out.println("----------------------Other Deductions----------------------");
-        System.out.println("SSS:             " + formattedSss);
-        System.out.println("Pag-Ibig:        " + formattedPagIbig);
-        System.out.println("PhilHealth:      " + formattedPhilHealth);
+        System.out.println("SSS             : " + formattedSss);
+        System.out.println("Pag-Ibig        : " + formattedPagIbig);
+        System.out.println("PhilHealth      : " + formattedPhilHealth);
         System.out.println("------------------------------------------------------------");
-        System.out.println("Net Pay:         " + formattedNetPay);
+        System.out.println("Net Pay         : " + formattedNetPay);
         System.out.println("------------------------------------------------------------");
     }
 }
