@@ -120,7 +120,7 @@ public class PaySlip_Cunanan {
 
     // Computations
     private double calcOvertimePay() {
-        return (basicSalary * 0.01) * overTimeHours;
+        return (basicSalary * 0.001) * overTimeHours;
     }
 
     private double calcGrossIncome() {
