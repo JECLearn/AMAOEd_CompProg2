@@ -76,19 +76,21 @@ public class PaySlip_Cunanan {
     }
 
     private double calcWithholdingTax() {
+        double withHoldingTax = 0;
         if (calcGrossIncome() <= 20000) {
-            return 0;
+            withHoldingTax = 0;
         } else if (calcGrossIncome() <= 31000) {
-            return (calcGrossIncome() - 20000) * 0.20;
+            withHoldingTax = (calcGrossIncome() - 20000) * 0.20;
         } else if (calcGrossIncome() <= 61000) {
-            return (calcGrossIncome() - 31000) * 0.25 + 2300;
+            withHoldingTax = (calcGrossIncome() - 31000) * 0.25 + 2300;
         } else if (calcGrossIncome() <= 154000) {
-            return (calcGrossIncome() - 61000) * 0.30 + 10000;
+            withHoldingTax = (calcGrossIncome() - 61000) * 0.30 + 10000;
         } else if (calcGrossIncome() <= 615000) {
-            return (calcGrossIncome() - 154000) * 0.32 + 38000;
+            withHoldingTax = (calcGrossIncome() - 154000) * 0.32 + 38000;
         } else if (calcGrossIncome() > 615000) {
-            return (calcGrossIncome() - 615000) * 0.35 + 185000;
+            withHoldingTax = (calcGrossIncome() - 615000) * 0.35 + 185000;
         }
+        return withHoldingTax;
     }
 
     private double calcNetPay() {
