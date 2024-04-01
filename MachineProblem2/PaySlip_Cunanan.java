@@ -74,4 +74,24 @@ public class PaySlip_Cunanan {
         }
         return philHealthContri;
     }
+
+    private double calcWithholdingTax() {
+        if (calcGrossIncome() <= 20000) {
+            return 0;
+        } else if (calcGrossIncome() <= 31000) {
+            return (calcGrossIncome() - 20000) * 0.20;
+        } else if (calcGrossIncome() <= 61000) {
+            return (calcGrossIncome() - 31000) * 0.25 + 2300;
+        } else if (calcGrossIncome() <= 154000) {
+            return (calcGrossIncome() - 61000) * 0.30 + 10000;
+        } else if (calcGrossIncome() <= 615000) {
+            return (calcGrossIncome() - 154000) * 0.32 + 38000;
+        } else if (calcGrossIncome() > 615000) {
+            return (calcGrossIncome() - 615000) * 0.35 + 185000;
+        }
+    }
+
+    private double calcNetPay() {
+        return calcGrossIncome() - calcWithholdingTax() - calcSSS() - calcPagIbig() - calcPhilHealth();
+    }
 }
