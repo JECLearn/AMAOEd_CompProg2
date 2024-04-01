@@ -6,19 +6,27 @@ public class PaySlip_Cunanan {
     // Attributes
     private String employeeName;
     private double basicSalary;
-    private int overTimeHours;
+    private double overTimeHours;
     private double overTimePay;
     private double grossIncome;
+    private double withHoldingTax;
     private double sss;
     private double pagIbig;
     private double philHealth;
     private double netPay;
 
     // Constructor
-    public PaySlip_Cunanan(String employeeName, double basicSalary, int overTimeHours) {
+    public PaySlip_Cunanan(String employeeName, double basicSalary, double overTimeHours) {
         this.employeeName = employeeName;
         this.basicSalary = basicSalary;
         this.overTimeHours = overTimeHours;
+        this.overTimePay = calcOvertimePay();
+        this.grossIncome = calcGrossIncome();
+        this.withHoldingTax = calcWithholdingTax();
+        this.sss = calcSSS();
+        this.pagIbig = calcPagIbig();
+        this.philHealth = calcPhilHealth();
+        this.netPay = calcNetPay();
     }
 
     // Getters
@@ -30,8 +38,36 @@ public class PaySlip_Cunanan {
         return basicSalary;
     }
 
-    public int getOverTimeHours() {
+    public double getOverTimeHours() {
         return overTimeHours;
+    }
+
+    public double getOverTimePay() {
+        return overTimePay;
+    }
+
+    public double getGrossIncome() {
+        return grossIncome;
+    }
+
+    public double getWithHoldingTax() {
+        return withHoldingTax;
+    }
+
+    public double getSss() {
+        return sss;
+    }
+
+    public double getPagIbig() {
+        return pagIbig;
+    }
+
+    public double getPhilHealth() {
+        return philHealth;
+    }
+
+    public double getNetPay() {
+        return netPay;
     }
 
 
@@ -46,6 +82,34 @@ public class PaySlip_Cunanan {
 
     public void setOverTimeHours(int overTimeHours) {
         this.overTimeHours = overTimeHours;
+    }
+
+    public void setOverTimePay(double overTimePay) {
+        this.overTimePay = overTimePay;
+    }
+
+    public void setGrossIncome(double grossIncome) {
+        this.grossIncome = grossIncome;
+    }
+
+    public void setWithHoldingTax(double withHoldingTax) {
+        this.withHoldingTax = withHoldingTax;
+    }
+
+    public void setSss(double sss) {
+        this.sss = sss;
+    }
+
+    public void setPagIbig(double pagIbig) {
+        this.pagIbig = pagIbig;
+    }
+
+    public void setPhilHealth(double philHealth) {
+        this.philHealth = philHealth;
+    }
+
+    public void setNetPay(double netPay) {
+        this.netPay = netPay;
     }
 
     // Computations
