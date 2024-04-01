@@ -9,7 +9,7 @@ Machine Problem 2
 package MachineProblem2;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
+import java.util.Scanner;
 
 public class Employee_Cunanan {
     public static void main(String[] args) {
@@ -20,8 +20,21 @@ public class Employee_Cunanan {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy hh:mm:ss a");
         String formattedDateTime = currentDateTime.format(formatter);
 
+        // Scanner for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompting user input
+        System.out.print("Enter employee name: ");
+        String employeeName = scanner.nextLine();
+
+        System.out.print("Enter basic salary: ");
+        double basicSalary = scanner.nextDouble();
+
+        System.out.print("Enter overtime hours: ");
+        double overtimeHours = scanner.nextDouble();
+
         // Create PaySlip object
-        PaySlip_Cunanan payslip = new PaySlip_Cunanan("J. E. Cunanan", 20000.00, 2.5);
+        PaySlip_Cunanan payslip = new PaySlip_Cunanan(employeeName, basicSalary, overtimeHours);
 
         // Formatting
         String formattedBasicSalary = String.format("₱%.2f", payslip.getBasicSalary());
@@ -35,7 +48,7 @@ public class Employee_Cunanan {
         String formattedNetPay = String.format("₱%.2f", payslip.getNetPay());
 
         // Print to terminal
-        System.out.println("------------------------------------------------------------");
+        System.out.println("\n------------------------------------------------------------");
         System.out.println("Date Generated:  " + formattedDateTime);
         System.out.println("------------------------------------------------------------");
         System.out.println("Employee Name:   " + payslip.getEmployeeName());
