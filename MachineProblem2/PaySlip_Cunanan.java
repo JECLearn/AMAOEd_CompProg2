@@ -1,6 +1,4 @@
 package MachineProblem2;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class PaySlip_Cunanan {
     // Attributes

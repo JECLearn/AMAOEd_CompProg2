@@ -7,7 +7,7 @@ public class Employee_Cunanan {
 
         // Formatting
         String formattedBasicSalary = String.format("₱%.2f", payslip.getBasicSalary());
-        String formattedOverTimeHours = String.format("%.2f", payslip.getOverTimeHours());
+        String formattedOverTimeHours = String.format("%.1f", payslip.getOverTimeHours());
         String formattedOverTimePay = String.format("₱%.2f", payslip.getOverTimePay());
         String formattedGrossIncome = String.format("₱%.2f", payslip.getGrossIncome());
         String formattedWithholdingTax = String.format("₱%.2f", payslip.getWithHoldingTax());
@@ -20,7 +20,7 @@ public class Employee_Cunanan {
         System.out.println("Employee Name:   " + payslip.getEmployeeName());
         System.out.println("------------------------------------------------------");
         System.out.println("Basic Salary:    " + formattedBasicSalary);
-        System.out.println("No. of OT Hours: " + formattedOverTimeHours);
+        System.out.println("No. of OT Hours: " + formattedOverTimeHours + " Hours");
         System.out.println("OT Pay:          " + formattedOverTimePay);
         System.out.println("Gross Income:    " + formattedGrossIncome);
         System.out.println("Withholding Tax: " + formattedWithholdingTax);
