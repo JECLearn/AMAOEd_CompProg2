@@ -16,7 +16,6 @@ public class StudentRecord {
         private double englishGrade;
         private double scienceGrade;
 
-
         //these are the mutators and accessors
         public String getName() {
             return name;
