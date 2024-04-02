@@ -19,4 +19,11 @@ public class ComputerScienceStudentRecord extends StudentRecord {
         super(name, mathGrade, englishGrade, scienceGrade);
 
     }
+
+    // Question 6
+    @Override
+    public double computeAverageGrade() {
+        return super.computeAverageGrade();
+    }
+
 }
