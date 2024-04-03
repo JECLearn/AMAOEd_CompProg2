@@ -20,7 +20,8 @@ public class BankAccount {
     private String contactNumber;
 
     // Constructor
-    public BankAccount(String accountName, String address, LocalDate birthday, String contactNumber) {
+    public BankAccount(String accountName, String address,
+                       LocalDate birthday, String contactNumber) {
         this.accountName = accountName;
         this.address = address;
         this.birthday = birthday;
