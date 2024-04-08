@@ -105,6 +105,7 @@ public class Client {
         int accountNo = scanner.nextInt();
         boolean found = false;
         for (int i = 0; i < accountCount; i++) {
+
             if (sa[i].validateAcct(accountNo)) {
                 System.out.println("Enter amount to deposit: ");
                 double amount = scanner.nextDouble();
@@ -123,6 +124,46 @@ public class Client {
 
     // Withdraw
     public static void withdraw(Scanner scanner) {
+
+        System.out.println("Enter account number: ");
+        int accountNo = scanner.nextInt();
+        boolean found = false;
+        for (int i = 0; i <accountCount; i++) {
+
+            if (sa[i].validateAcct(accountNo)) {
+                System.out.println("Enter amount to withdraw: ");
+                double amount = scanner.nextDouble();
+                sa[i].withdraw(amount);
+                found = true;
+                break;
+            }
+
+        }
+
+        if (!found) {
+            System.out.println("Invalid account number.");
+        }
+
+    }
+
+    // View Client Profile
+    public static void clientProfile(Scanner scanner) {
+        System.out.println("Enter account number: ");
+        int accountNo = scanner.nextInt();
+        boolean found = false;
+        for (int i = 0; i < accountCount; i++) {
+
+            if (sa[i].validateAcct(accountNo)) {
+                sa[i].getClientDetails();
+                found = true;
+                break;
+            }
+
+        }
+
+        if (!found) {
+            System.out.println("Invalid account number.");
+        }
 
     }
 
