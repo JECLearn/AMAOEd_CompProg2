@@ -167,4 +167,25 @@ public class Client {
 
     }
 
+    // Close Account
+    public static void closeAccount(Scanner scanner) {
+        System.out.println("Enter account number.");
+        int accountNo = scanner.nextInt();
+        boolean found = false;
+        for (int i = 0; i < accountCount; i++) {
+
+            if (sa[i].validateAcct(accountNo)) {
+                sa[i].closeAccount();
+                found = true;
+                break;
+            }
+
+        }
+
+        if (!found) {
+            System.out.println("Invalid account number.");
+        }
+
+    }
+
 }

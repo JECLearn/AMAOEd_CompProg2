@@ -85,7 +85,7 @@ public class SavingsAccount extends BankAccount{
     }
 
     // Close Account
-    public void closeAccount(int accountNo) {
+    public void closeAccount() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Are you sure you want to close the account? (Y/N)");
         String choice = scanner.nextLine();
