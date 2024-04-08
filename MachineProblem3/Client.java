@@ -37,39 +37,39 @@ public class Client {
                     if (accountCount > 0) {
                         balanceInquiry(scanner);
                     } else {
-                        System.out.println("No accounts present.");
+                        System.out.println("No accounts present.\n");
                     }
                     break;
                 case 3:
                     if (accountCount > 0) {
                         deposit(scanner);
                     } else {
-                        System.out.println("No accounts present.");
+                        System.out.println("No accounts present.\n");
                     }
                     break;
                 case 4:
                     if (accountCount > 0) {
                         withdraw(scanner);
                     } else {
-                        System.out.println("No accounts present.");
+                        System.out.println("No accounts present.\n");
                     }
                     break;
                 case 5:
                     if (accountCount > 0) {
                         clientProfile(scanner);
                     } else {
-                        System.out.println("No accounts present.");
+                        System.out.println("No accounts present.\n");
                     }
                     break;
                 case 6:
                     if (accountCount > 0) {
                         closeAccount(scanner);
                     } else {
-                        System.out.println("No accounts present.");
+                        System.out.println("No accounts present.\n");
                     }
                     break;
                 case 7:
-                    System.out.println("Thank you for using AMA Bank!");
+                    System.out.println("Thank you for using AMA Bank!\n");
                     break;
                 default:
                     System.out.println("Invalid option. Please try again.");
@@ -86,6 +86,7 @@ public class Client {
     public static void displayMainMenu() {
 
         // Main Menu Display
+        System.out.println("-----------------------------------------------------");
         System.out.println("                 Welcome to AMA Bank                 ");
         System.out.println("--------------------- MAIN MENU ---------------------");
         System.out.println("\nPlease Select Option\n");
@@ -103,6 +104,7 @@ public class Client {
     // Create New Account
     public static void createNewAccount(Scanner scanner) {
 
+        scanner.nextLine();
         System.out.print("Enter client name: ");
         String name = scanner.nextLine();
         System.out.print("Enter address: ");
@@ -113,6 +115,7 @@ public class Client {
         String contactNumber = scanner.nextLine();
         System.out.print("Enter initial deposit (minimum PHP 5,000.00): ");
         double initialDeposit = scanner.nextDouble();
+        scanner.nextLine();
 
         // Initial deposit check
         if (initialDeposit >= MIN_INITIAL_DEPOSIT) {
@@ -125,9 +128,9 @@ public class Client {
             account.setBalance(initialDeposit);
             sa[accountCount] = account;
             accountCount++;
-            System.out.println("Account created successfully. Your account number is " + accountNo);
+            System.out.println("Account created successfully. Your account number is " + accountNo + "\n");
         } else {
-            System.out.println("Initial deposit must be at least PHP 5000.00");
+            System.out.println("Initial deposit must be at least PHP 5000.00\n");
         }
 
     }
@@ -225,7 +228,8 @@ public class Client {
 
     // Close Account
     public static void closeAccount(Scanner scanner) {
-        System.out.println("Enter account number.");
+
+        System.out.println("Enter account number: ");
         int accountNo = scanner.nextInt();
         boolean found = false;
         for (int i = 0; i < accountCount; i++) {

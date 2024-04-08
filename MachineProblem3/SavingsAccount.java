@@ -54,7 +54,7 @@ public class SavingsAccount extends BankAccount{
     // METHODS
     // Balance Inquiry
     public void balanceInquiry() {
-        System.out.println("Current Balance: " + balance);
+        System.out.println("Current Balance: PHP" + balance);
     }
 
     // Deposit
@@ -62,7 +62,7 @@ public class SavingsAccount extends BankAccount{
         balance += amount;
         double interest = balance * interestRate;
         balance += interest;
-        System.out.println("Deposit successful. New Balance: " + balance);
+        System.out.println("Deposit successful. New Balance: PHP" + balance);
     }
 
     // Withdraw
@@ -96,7 +96,7 @@ public class SavingsAccount extends BankAccount{
         } else {
             System.out.println("Account closure canceled.");
         }
-        scanner.close();
+
     }
 
 }

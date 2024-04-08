@@ -61,13 +61,14 @@ public class BankAccount {
         this.contactNumber = contactNumber;
     }
 
-    // Get Client Details Method
+    // METHODS
+    // Get Client Details
     public void getClientDetails() {
 
         System.out.println("Account Name: " + accountName);
         System.out.println("Address: " + address);
         System.out.println("Birthday: " + birthday);
-        System.out.println("Contact Number: " + contactNumber);
+        System.out.println("Contact Number: " + contactNumber + "\n");
 
     }
 
