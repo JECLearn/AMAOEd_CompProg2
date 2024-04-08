@@ -68,7 +68,7 @@ public class BankAccount {
         System.out.println("Account Name: " + accountName);
         System.out.println("Address: " + address);
         System.out.println("Birthday: " + birthday);
-        System.out.println("Contact Number: " + contactNumber + "\n");
+        System.out.println("Contact Number: " + contactNumber);
 
     }
 
