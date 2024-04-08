@@ -1,7 +1,5 @@
 package MachineProblem3;
 
-import java.time.LocalDate;
-
 /*
 AMAOEd MIS6232 Computer Programming 2 (Java)
 
@@ -16,12 +14,12 @@ public class BankAccount {
     // Attributes
     private String accountName;
     private String address;
-    private LocalDate birthday;
+    private String birthday;
     private String contactNumber;
 
     // Constructor
     public BankAccount(String accountName, String address,
-                       LocalDate birthday, String contactNumber) {
+                       String birthday, String contactNumber) {
         this.accountName = accountName;
         this.address = address;
         this.birthday = birthday;
@@ -37,7 +35,7 @@ public class BankAccount {
         return address;
     }
 
-    public LocalDate getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
@@ -55,7 +53,7 @@ public class BankAccount {
         this.address = address;
     }
 
-    public void setBirthday(LocalDate birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
@@ -64,11 +62,13 @@ public class BankAccount {
     }
 
     // Get Client Details Method
-    public String getClientDetails() {
-        return "Account Name: " + accountName +
-                "\nAddress: " + address +
-                "\nBirthday: " + birthday +
-                "\nContact Number: " + contactNumber;
+    public void getClientDetails() {
+
+        System.out.println("Account Name: " + accountName);
+        System.out.println("Address: " + address);
+        System.out.println("Birthday: " + birthday);
+        System.out.println("Contact Number: " + contactNumber);
+
     }
 
 }
