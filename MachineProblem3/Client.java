@@ -1,5 +1,6 @@
 package MachineProblem3;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /*
@@ -13,42 +14,20 @@ Machine Problem 3 (Course Project)
 
 public class Client {
 
+    private static final int MAX_ACCOUNTS = 100;
+    private static final int MIN_INITIAL_DEPOSIT = 5000;
+    private static SavingsAccount[] sa = new SavingsAccount[MAX_ACCOUNTS];
+    private static int accountCount = 0;
+
     public static void main(String[] args) {
 
-        SavingsAccount[] sa = new SavingsAccount[100];
-        Scanner scanner = new Scanner(System.in);
-        int userInput = scanner.nextInt();
 
-        mainMenu();
-
-        while (true) {
-
-            switch (userInput) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    break;
-                case 7:
-                    break;
-                default:
-                    System.out.println("Wrong input. Try again.");
-                    continue;
-            }
-            break;
-
-        }
 
     }
 
-    public static void mainMenu() {
+    // METHODS
+    // Main Menu Display
+    public static void displayMainMenu() {
 
         // Main Menu Display
         System.out.println("                 Welcome to AMA Bank                 ");
@@ -63,6 +42,36 @@ public class Client {
         System.out.println("[7] Exit");
         System.out.println("-----------------------------------------------------");
 
+    }
+
+    // Create New Account
+    public static void createNewAccount(Scanner scanner) {
+        System.out.print("Enter client name: ");
+        String name = scanner.nextLine();
+        System.out.print("Enter address: ");
+        String address = scanner.nextLine();
+        System.out.print("Enter birthday: ");
+        String birthday = scanner.nextLine();
+        System.out.print("Enter contact number: ");
+        String contactNumber = scanner.nextLine();
+        System.out.print("Enter initial deposit (minimum PHP 5,000.00): ");
+        double initialDeposit = scanner.nextDouble();
+
+        // Initial deposit check
+        if (initialDeposit >= MIN_INITIAL_DEPOSIT) {
+            Random rand = new Random();
+            int accountNo = rand.nextInt(9000) + 1000;
+
+            SavingsAccount account = new SavingsAccount(name, address,birthday, contactNumber,
+                                                        accountNo, initialDeposit, 0.05);
+            account.setAccountNo(accountNo);
+            account.setBalance(initialDeposit);
+            sa[accountCount] = account;
+            accountCount++;
+            System.out.println("Account created successfully. Your account number is " + accountNo);
+        } else {
+            System.out.println("Initial deposit must be at least PHP 5000.00");
+        }
     }
 
 }
