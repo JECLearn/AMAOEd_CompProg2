@@ -21,7 +21,63 @@ public class Client {
 
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+        int option;
 
+        do {
+            displayMainMenu();
+            System.out.print("Enter selection: ");
+            option = scanner.nextInt();
+
+            switch (option) {
+                case 1:
+                    createNewAccount(scanner);
+                    break;
+                case 2:
+                    if (accountCount > 0) {
+                        balanceInquiry(scanner);
+                    } else {
+                        System.out.println("No accounts present.");
+                    }
+                    break;
+                case 3:
+                    if (accountCount > 0) {
+                        deposit(scanner);
+                    } else {
+                        System.out.println("No accounts present.");
+                    }
+                    break;
+                case 4:
+                    if (accountCount > 0) {
+                        withdraw(scanner);
+                    } else {
+                        System.out.println("No accounts present.");
+                    }
+                    break;
+                case 5:
+                    if (accountCount > 0) {
+                        clientProfile(scanner);
+                    } else {
+                        System.out.println("No accounts present.");
+                    }
+                    break;
+                case 6:
+                    if (accountCount > 0) {
+                        closeAccount(scanner);
+                    } else {
+                        System.out.println("No accounts present.");
+                    }
+                    break;
+                case 7:
+                    System.out.println("Thank you for using AMA Bank!");
+                    break;
+                default:
+                    System.out.println("Invalid option. Please try again.");
+            }
+
+        } while (option != 7);
+
+        scanner.close();
 
     }
 
