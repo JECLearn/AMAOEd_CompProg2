@@ -14,13 +14,13 @@ import java.time.LocalDate;
 public class SavingsAccount extends BankAccount{
 
     // Attributes
-    private String accountNo;
+    private int accountNo;
     private double balance;
     private double interestRate;
 
     // Constructor
     public SavingsAccount(String accountName, String address, LocalDate birthday,
-                          String contactNumber, String accountNo, double balance,
+                          String contactNumber, int accountNo, double balance,
                           double interestRate) {
         super(accountName, address, birthday, contactNumber);
         this.accountNo = accountNo;
@@ -29,7 +29,7 @@ public class SavingsAccount extends BankAccount{
     }
 
     // Getters
-    public String getAccountNo() {
+    public int getAccountNo() {
         return accountNo;
     }
 
@@ -42,7 +42,7 @@ public class SavingsAccount extends BankAccount{
     }
 
     // Setters
-    public void setAccountNo(String accountNo) {
+    public void setAccountNo(int accountNo) {
         this.accountNo = accountNo;
     }
 
