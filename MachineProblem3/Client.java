@@ -46,6 +46,7 @@ public class Client {
 
     // Create New Account
     public static void createNewAccount(Scanner scanner) {
+
         System.out.print("Enter client name: ");
         String name = scanner.nextLine();
         System.out.print("Enter address: ");
@@ -72,6 +73,57 @@ public class Client {
         } else {
             System.out.println("Initial deposit must be at least PHP 5000.00");
         }
+
+    }
+
+    // Balance Inquiry
+    public static void balanceInquiry(Scanner scanner) {
+
+        System.out.println("Enter account number: ");
+        int accountNo = scanner.nextInt();
+        boolean found = false;
+        for (int i = 0; i <accountCount; i++) {
+
+            if (sa[i].validateAcct(accountNo)) {
+                sa[i].balanceInquiry();
+                found = true;
+                break;
+            }
+
+        }
+
+        if (!found) {
+            System.out.println("Invalid account number.");
+        }
+
+    }
+
+    // Deposit
+    public static void deposit(Scanner scanner) {
+
+        System.out.println("Enter account number: ");
+        int accountNo = scanner.nextInt();
+        boolean found = false;
+        for (int i = 0; i < accountCount; i++) {
+            if (sa[i].validateAcct(accountNo)) {
+                System.out.println("Enter amount to deposit: ");
+                double amount = scanner.nextDouble();
+                sa[i].deposit(amount);
+                found = true;
+                break;
+            }
+
+        }
+
+        if (!found) {
+            System.out.println("Invalid account number.");
+        }
+
+    }
+
+    // Withdraw
+    public static void withdraw(Scanner scanner) {
+
     }
 
 }
