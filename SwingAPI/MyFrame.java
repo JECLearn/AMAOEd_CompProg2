@@ -26,6 +26,22 @@ public class MyFrame extends JFrame {
         this.setSize(400, 300);
         this.setLocation(150, 50);
         this.setVisible(true);
+
+        // Define components
+        lblName.setSize(150,20);
+        lblName.setLocation(100,20);
+
+        txtName.setSize(100,20);
+        txtName.setLocation(200,20);
+
+        // Define Panel
+        this.panel.setLayout(null);
+        this.setContentPane(panel);
+
+        // Add components to the frame
+        this.getContentPane().add(lblName);
+        this.getContentPane().add(txtName);
+        this.getContentPane().add(btnSubmit);
     }
 
 }
