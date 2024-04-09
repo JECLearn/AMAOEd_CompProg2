@@ -21,15 +21,21 @@ public class FileIOExercise {
             fileOutputStream = new FileOutputStream("output.txt");
 
             int c;
-            while ((c = in.read()) != -1) {
-                out.write(c);
+            while ((c = fileInputStream.read()) != -1) {
+                fileOutputStream.write(c);
             }
+        } catch (IOException e) {
+            e.printStackTrace();
         } finally {
-            if (fileInputStream != null) {
-                fileInputStream.close();
-            }
-            if (fileOutputStream != null) {
-                fileOutputStream.close();
+            try {
+                if (fileInputStream != null) {
+                    fileInputStream.close();
+                }
+                if (fileOutputStream != null) {
+                    fileOutputStream.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
     }
