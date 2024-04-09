@@ -34,6 +34,9 @@ public class MyFrame extends JFrame {
         txtName.setSize(100,20);
         txtName.setLocation(200,20);
 
+        btnSubmit.setSize(100,20);
+        btnSubmit.setLocation(150, 80);
+
         // Define Panel
         this.panel.setLayout(null);
         this.setContentPane(panel);
