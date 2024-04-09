@@ -17,8 +17,8 @@ public class FileIOExercise {
         FileOutputStream fileOutputStream = null;
 
         try {
-            fileInputStream = new FileInputStream("input.txt");
-            fileOutputStream = new FileOutputStream("output.txt");
+            fileInputStream = new FileInputStream("Lab010/input.txt");
+            fileOutputStream = new FileOutputStream("Lab010/output.txt");
 
             int c;
             while ((c = fileInputStream.read()) != -1) {
