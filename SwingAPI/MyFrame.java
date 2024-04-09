@@ -1,0 +1,31 @@
+package SwingAPI;
+
+/*
+AMAOEd MIS6232 Computer Programming 2 (Java)
+
+Author: J. E. Cunanan
+Student No: 2022-0072254
+
+Swing API
+*/
+
+import javax.swing.*;
+
+public class MyFrame extends JFrame {
+    // Declare components
+    private JLabel lblName = new JLabel("Enter your name: ");
+    private JTextField txtName = new JTextField();
+    private JButton btnSubmit = new JButton("Submit");
+    private JPanel panel = new JPanel();
+
+    // Constructor
+    public MyFrame() {
+        // JFrame Methods
+        super("My First Swing Frame");
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setSize(400, 300);
+        this.setLocation(150, 50);
+        this.setVisible(true);
+    }
+
+}
