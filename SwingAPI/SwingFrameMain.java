@@ -11,6 +11,7 @@ Swing API
 
 public class SwingFrameMain {
     public static void main(String[] args) {
-
+        // Instantiate frame
+        MyFrame mf = new MyFrame();
     }
 }
