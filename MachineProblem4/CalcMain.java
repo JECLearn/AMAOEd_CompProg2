@@ -44,6 +44,24 @@ public class CalcMain extends JFrame implements ActionListener{
         divideButton.addActionListener(this);
         resetButton.addActionListener(this);
         exitButton.addActionListener(this);
+
+        // Button panel
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.add(addButton);
+        buttonPanel.add(subtractButton);
+        buttonPanel.add(multiplyButton);
+        buttonPanel.add(divideButton);
+        buttonPanel.add(resetButton);
+        buttonPanel.add(exitButton);
+
+        // Input panel
+        JPanel inputPanel = new JPanel(new GridLayout(3, 2));
+        inputPanel.add(new JLabel("First Number: "));
+        inputPanel.add(firstNumber);
+        inputPanel.add(new JLabel("Second Number: "));
+        inputPanel.add(secondNumber);
+        inputPanel.add(new JLabel("Result: "));
+        inputPanel.add(result);
     }
 
 }
