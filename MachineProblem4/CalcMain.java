@@ -9,6 +9,10 @@ Student No: 2022-0072254
 Machine Problem 4
 */
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
 public class CalcMain {
     public static void main(String[] args) {
 
