@@ -14,9 +14,9 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class CalcMain extends JFrame implements ActionListener{
-    private JTextField firstNumber;
-    private JTextField secondNumber;
-    private JTextField result;
+    private JTextField firstNumberField;
+    private JTextField secondNumberField;
+    private JTextField resultField;
 
     public CalcMain() {
         setTitle("Calculator");
@@ -24,10 +24,10 @@ public class CalcMain extends JFrame implements ActionListener{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Display
-        firstNumber = new JTextField(10);
-        secondNumber = new JTextField(10);
-        result = new JTextField(10);
-        result.setEditable(false);
+        firstNumberField = new JTextField(10);
+        secondNumberField = new JTextField(10);
+        resultField = new JTextField(10);
+        resultField.setEditable(false);
 
         // Buttons
         JButton addButton = new JButton("ADD");
@@ -57,11 +57,48 @@ public class CalcMain extends JFrame implements ActionListener{
         // Input panel
         JPanel inputPanel = new JPanel(new GridLayout(3, 2));
         inputPanel.add(new JLabel("First Number: "));
-        inputPanel.add(firstNumber);
+        inputPanel.add(firstNumberField);
         inputPanel.add(new JLabel("Second Number: "));
-        inputPanel.add(secondNumber);
+        inputPanel.add(secondNumberField);
         inputPanel.add(new JLabel("Result: "));
-        inputPanel.add(result);
+        inputPanel.add(resultField);
+
+        // Panels to frame
+        add(inputPanel, BorderLayout.NORTH);
+        add(buttonPanel, BorderLayout.CENTER);
+
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        if (e.getActionCommand().equals("RESET")) {
+            firstNumberField.setText("");
+            secondNumberField.setText("");
+            resultField.setText("");
+        } else if (e.getActionCommand().equals("QUIT")) {
+            int option = JOptionPane.showConfirmDialog(this, "Are you sure you want to quit?",
+                    "Quit", JOptionPane.YES_NO_OPTION);
+            if (option == JOptionPane.YES_OPTION) {
+                System.exit(0);
+            }
+        } else {
+            double firstNumber = Double.parseDouble(firstNumberField.getText());
+            double secondNumber = Double.parseDouble(secondNumberField.getText());
+            double result = 0;
+
+            // Arithmetic
+            if (e.getActionCommand().equals("ADD")) {
+                result = firstNumber + secondNumber;
+            } else if (e.getActionCommand().equals("SUBTRACT")) {
+                result = firstNumber - secondNumber;
+            } else if (e.getActionCommand().equals("MULTIPLY")) {
+                result = firstNumber * secondNumber;
+            } else if (e.getActionCommand().equals("DIVIDE")) {
+                result = firstNumber / secondNumber;
+            }
+
+            // Update result
+            resultField.setText(Double.toString(result));
+        }
     }
 
 }
