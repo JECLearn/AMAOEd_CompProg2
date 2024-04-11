@@ -20,7 +20,7 @@ public class CalcMain extends JFrame implements ActionListener{
 
     public CalcMain() {
         setTitle("Calculator");
-        setSize(400,600);
+        setSize(400,200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Display
@@ -74,7 +74,7 @@ public class CalcMain extends JFrame implements ActionListener{
             firstNumberField.setText("");
             secondNumberField.setText("");
             resultField.setText("");
-        } else if (e.getActionCommand().equals("QUIT")) {
+        } else if (e.getActionCommand().equals("EXIT")) {
             int option = JOptionPane.showConfirmDialog(this, "Are you sure you want to quit?",
                     "Quit", JOptionPane.YES_NO_OPTION);
             if (option == JOptionPane.YES_OPTION) {
@@ -99,6 +99,16 @@ public class CalcMain extends JFrame implements ActionListener{
             // Update result
             resultField.setText(Double.toString(result));
         }
+
+    }
+
+    public static void main(String[] args) {
+
+        SwingUtilities.invokeLater(() -> {
+            CalcMain calculator = new CalcMain();
+            calculator.setVisible(true);
+        });
+
     }
 
 }
